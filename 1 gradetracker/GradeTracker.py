@@ -9,7 +9,7 @@ See https://www.geeksforgeeks.org/python-docstrings/
 import statistics as s
 
 #add constants next
-admins = {'Dominic':'Hacker','Faculty2':'ABC123','Faculty3':'123ABC'}
+admins = {'Faculty1':'ABC123','Faculty2':'ABC123','Brandon':'Watts'}
 
 # Like the admins above is a dictionary but of students.
 # Dictionaries use curly brackets with colons to associate keys with values.
@@ -37,6 +37,8 @@ def enter_grades():
         print(str(name_to_enter)+' now has these grades:')
         print(students[name_to_enter])
     else:
+        print('Invalid login. Please check your username and try again.')
+        print('Invalid login. Please check your username and try again.')
         print('Student not found. Please check your spelling or go back and add if new.')
 
 def remove_student():
@@ -69,13 +71,11 @@ def main():
     # Here we present our main menu options once a person logs in successfully.
     print("""
     Welcome to the Grade Tracker
-
     [1] - Enter Grades
     [2] - Remove Student
     [3] - Student Averages
     [4] - Exit
     """)
-
     action = input('What would you like to do? (Enter a number) ')
     #Here we process their choice of what they want to do.
     if action == '1':
@@ -97,12 +97,12 @@ login = input('Faculty account name: ')
 
 if login in admins:
     password = input('Password: ')
-    if admins[login] == password:
-        print('Welcome,',login)
+    if admins [login] == password:
+        print('welcome,',login)
         #now run the code
         while True:
             main()
     else:
         print('Invalid password.')
 else:
-    print('Invalid user.')
+    print('Invaid user.')
