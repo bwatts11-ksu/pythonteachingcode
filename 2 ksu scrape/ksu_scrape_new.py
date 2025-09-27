@@ -1,6 +1,5 @@
 '''
 To use this code, you will first need to install the three packages being imported below using pip or a manual install method.
-This code was updated in August 2021 to use the new KSU news feed design.
 '''
 from bs4 import BeautifulSoup
 import requests
@@ -34,7 +33,7 @@ def scrape_ksu(ksu_url,page):
     i = 1
     for blog_post in blog_posts:
         
-        #print(i)
+        #print(
         title = blog_post.h3.text
         #print(title)
     
